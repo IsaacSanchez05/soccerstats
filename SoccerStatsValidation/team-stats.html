@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SoccerStats | Team Stats</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand-logo" src="images/logo.png" alt="SoccerStats logo" />
+      <span class="brand-name">SoccerStats</span>
+    </div>
+
+    <nav class="top-nav" aria-label="Primary">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link active" href="team-stats.html" aria-current="page">Team Stats</a>
+      <a class="nav-link" href="player-stats.html">Player Stats</a>
+      <a class="nav-link" href="compare.html">Compare Players</a>
+      <a class="nav-link" href="contact.html">Contact Us</a>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="signin.html">Sign in</a>
+        <a class="btn btn-solid" href="register.html">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1 class="page-title">Team Stats</h1>
+
+    <section class="search-row" aria-label="Search for team">
+      <span class="search-label">Search for Team</span>
+      <span class="search-icon" aria-hidden="true">Q</span>
+    </section>
+
+    <section class="stats-layout" aria-label="Team stats layout">
+      <div class="team-logo-wrap">
+        <img class="team-logo-large" src="images/teams/barcelona.png" alt="FC Barcelona crest" />
+      </div>
+
+      <div class="team-card" role="region" aria-label="Team stats card">
+        <h2 class="team-card-title">Team</h2>
+
+        <div class="team-card-columns">
+          <ul class="stat-list">
+            <li>Wins</li>
+            <li>Losses</li>
+            <li>Seed</li>
+            <li>Games</li>
+            <li>League</li>
+          </ul>
+
+          <ul class="stat-list">
+            <li>Goals</li>
+            <li>Assists</li>
+            <li>Minutes</li>
+            <li>Yellow Cards</li>
+            <li>Red Cards</li>
+          </ul>
+        </div>
+
+        <button class="select-team-btn" type="button">Select New Team</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-left" aria-label="Social links">
+      <a class="social" href="#" aria-label="X">X</a>
+      <a class="social" href="#" aria-label="Instagram">◎</a>
+      <a class="social" href="#" aria-label="YouTube">▶</a>
+      <a class="social" href="#" aria-label="LinkedIn">in</a>
+    </nav>
+
+    <div class="footer-links">
+      <a href="#" class="footer-link">Explore</a>
+      <a href="#" class="footer-link">Resources</a>
+    </div>
+
+    <div class="footer-right" aria-hidden="true"></div>
+  </footer>
+</body>
+</html>
