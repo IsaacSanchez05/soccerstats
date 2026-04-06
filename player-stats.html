@@ -27,57 +27,372 @@
   <main class="page">
     <h1 class="page-title">Player Stats</h1>
 
-    <section class="search-row" aria-label="Search for player">
-      <span class="search-label">Search for Player</span>
-      <span class="search-icon" aria-hidden="true">Q</span>
-    </section>
-
-    <section class="playerstats-layout" aria-label="Player stats layout">
-      <div class="playerstats-photo-wrap">
-        <img class="playerstats-photo" src="images/players/bellingham.jpg" alt="Player" />
-      </div>
-
-      <div class="team-card" role="region" aria-label="Player stats card">
-        <h2 class="team-card-title">Player</h2>
-
-        <div class="team-card-columns">
-          <ul class="stat-list">
-            <li>Age</li>
-            <li>Team</li>
-            <li>Height</li>
-            <li>Position</li>
-            <li>League</li>
-          </ul>
-
-          <ul class="stat-list">
-            <li>Goals</li>
-            <li>Assist</li>
-            <li>Minutes</li>
-            <li>Yellow Cards</li>
-            <li>Red Cards</li>
-          </ul>
+    <section class="player-filters" aria-label="Filter players">
+      <div class="filter-card">
+        <div class="filter-group filter-group-search">
+          <label class="filter-label" for="playerSearch">Search Player</label>
+          <input
+            id="playerSearch"
+            class="filter-input"
+            type="text"
+            placeholder="Type a player name..."
+            autocomplete="off"
+          />
         </div>
 
-        <button class="select-team-btn" type="button">Select New Player</button>
+        <div class="filter-group">
+          <label class="filter-label" for="teamFilter">Filter by Team</label>
+          <select id="teamFilter" class="filter-select">
+            <option value="all">All Teams</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label" for="playerSelect">Choose Player</label>
+          <select id="playerSelect" class="filter-select">
+            <option value="">Select a player</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="playerstats-layout professional-player-layout" aria-label="Player stats layout">
+      <div class="playerstats-photo-wrap">
+        <a
+          id="playerImageLink"
+          href="https://www.laliga.com/en-GB/player/jude-bellingham"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open official player stats page"
+          class="player-photo-link"
+        >
+          <img
+            id="playerPhoto"
+            class="playerstats-photo"
+            src="images/players/bellingham.jpg"
+            alt="Jude Bellingham"
+          />
+        </a>
+      </div>
+
+      <div class="team-card professional-card" role="region" aria-label="Player stats card">
+        <div class="player-card-top">
+          <div>
+            <p class="player-card-kicker">Official LALIGA Profile</p>
+            <h2 id="playerName" class="team-card-title player-main-title">Jude Bellingham</h2>
+            <p id="playerClub" class="player-club-line">Real Madrid</p>
+          </div>
+
+          <a
+            id="playerProfileBtn"
+            class="profile-link-btn"
+            href="https://www.laliga.com/en-GB/player/jude-bellingham"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Official Stats
+          </a>
+        </div>
+
+        <div class="player-stat-grid">
+          <div class="player-stat-item">
+            <span class="player-stat-label">Age</span>
+            <span id="statAge" class="player-stat-value">21</span>
+          </div>
+
+          <div class="player-stat-item">
+            <span class="player-stat-label">Team</span>
+            <span id="statTeam" class="player-stat-value">Real Madrid</span>
+          </div>
+
+          <div class="player-stat-item">
+            <span class="player-stat-label">Height</span>
+            <span id="statHeight" class="player-stat-value">186 cm</span>
+          </div>
+
+          <div class="player-stat-item">
+            <span class="player-stat-label">Position</span>
+            <span id="statPosition" class="player-stat-value">Midfielder</span>
+          </div>
+
+          <div class="player-stat-item">
+            <span class="player-stat-label">League</span>
+            <span id="statLeague" class="player-stat-value">LALIGA EA SPORTS</span>
+          </div>
+
+          <div class="player-stat-item">
+            <span class="player-stat-label">Goals</span>
+            <span id="statGoals" class="player-stat-value">4</span>
+          </div>
+
+          <div class="player-stat-item">
+            <span class="player-stat-label">Assists</span>
+            <span id="statAssists" class="player-stat-value">3</span>
+          </div>
+
+          <div class="player-stat-item">
+            <span class="player-stat-label">Minutes</span>
+            <span id="statMinutes" class="player-stat-value">1291</span>
+          </div>
+
+          <div class="player-stat-item">
+            <span class="player-stat-label">Yellow Cards</span>
+            <span id="statYellow" class="player-stat-value">1</span>
+          </div>
+
+          <div class="player-stat-item">
+            <span class="player-stat-label">Red Cards</span>
+            <span id="statRed" class="player-stat-value">0</span>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <nav class="footer-left" aria-label="Social links">
-      <a class="social" href="#" aria-label="X">X</a>
-      <a class="social" href="#" aria-label="Instagram">◎</a>
-      <a class="social" href="#" aria-label="YouTube">▶</a>
-      <a class="social" href="#" aria-label="LinkedIn">in</a>
+      <a class="social" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+      <a class="social" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+      <a class="social" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+      <a class="social" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
     </nav>
-
-    <div class="footer-links">
-      <a href="#" class="footer-link">Explore</a>
-      <a href="#" class="footer-link">Resources</a>
-    </div>
-
-    <div class="footer-right" aria-hidden="true"></div>
   </footer>
+
+  <script>
+    const players = [
+      {
+        name: "Jude Bellingham",
+        team: "Real Madrid",
+        age: "21",
+        height: "186 cm",
+        position: "Midfielder",
+        league: "LALIGA EA SPORTS",
+        goals: "4",
+        assists: "3",
+        minutes: "1291",
+        yellowCards: "1",
+        redCards: "0",
+        image: "images/players/bellingham.jpg",
+        link: "https://www.laliga.com/en-GB/player/jude-bellingham"
+      },
+      {
+        name: "Kylian Mbappé",
+        team: "Real Madrid",
+        age: "26",
+        height: "178 cm",
+        position: "Forward",
+        league: "LALIGA EA SPORTS",
+        goals: "22",
+        assists: "3",
+        minutes: "2537",
+        yellowCards: "3",
+        redCards: "1",
+        image: "images/players/mbappe.jpg",
+        link: "https://www.laliga.com/en-GB/player/kylian-mbappe-lottin"
+      },
+      {
+        name: "Vinícius Júnior",
+        team: "Real Madrid",
+        age: "24",
+        height: "176 cm",
+        position: "Forward",
+        league: "LALIGA EA SPORTS",
+        goals: "10",
+        assists: "5",
+        minutes: "1966",
+        yellowCards: "8",
+        redCards: "1",
+        image: "images/players/vinicius.jpg",
+        link: "https://www.laliga.com/en-GB/player/vini-jr"
+      },
+      {
+        name: "Rodrygo",
+        team: "Real Madrid",
+        age: "24",
+        height: "174 cm",
+        position: "Forward",
+        league: "LALIGA EA SPORTS",
+        goals: "6",
+        assists: "5",
+        minutes: "1727",
+        yellowCards: "0",
+        redCards: "0",
+        image: "images/players/rodrygo.jpg",
+        link: "https://www.laliga.com/en-GB/player/rodrygo"
+      },
+      {
+        name: "Eduardo Camavinga",
+        team: "Real Madrid",
+        age: "22",
+        height: "182 cm",
+        position: "Midfielder",
+        league: "LALIGA EA SPORTS",
+        goals: "0",
+        assists: "2",
+        minutes: "1166",
+        yellowCards: "5",
+        redCards: "0",
+        image: "images/players/camavinga.jpg",
+        link: "https://www.laliga.com/en-GB/player/eduardo-camavinga"
+      },
+      {
+        name: "Pedri",
+        team: "FC Barcelona",
+        age: "22",
+        height: "174 cm",
+        position: "Midfielder",
+        league: "LALIGA EA SPORTS",
+        goals: "4",
+        assists: "5",
+        minutes: "2614",
+        yellowCards: "3",
+        redCards: "1",
+        image: "images/players/pedri.jpg",
+        link: "https://www.laliga.com/en-GB/player/pedri"
+      },
+      {
+        name: "Gavi",
+        team: "FC Barcelona",
+        age: "20",
+        height: "173 cm",
+        position: "Midfielder",
+        league: "LALIGA EA SPORTS",
+        goals: "1",
+        assists: "1",
+        minutes: "993",
+        yellowCards: "4",
+        redCards: "0",
+        image: "images/players/gavi.jpg",
+        link: "https://www.laliga.com/en-GB/player/gavi"
+      },
+      {
+        name: "Dani Olmo",
+        team: "FC Barcelona",
+        age: "26",
+        height: "179 cm",
+        position: "Midfielder",
+        league: "LALIGA EA SPORTS",
+        goals: "9",
+        assists: "2",
+        minutes: "1277",
+        yellowCards: "1",
+        redCards: "0",
+        image: "images/players/olmo.jpg",
+        link: "https://www.laliga.com/en-GB/player/dani-olmo"
+      }
+    ];
+
+    const playerSearch = document.getElementById("playerSearch");
+    const teamFilter = document.getElementById("teamFilter");
+    const playerSelect = document.getElementById("playerSelect");
+
+    const playerName = document.getElementById("playerName");
+    const playerClub = document.getElementById("playerClub");
+    const playerPhoto = document.getElementById("playerPhoto");
+    const playerImageLink = document.getElementById("playerImageLink");
+    const playerProfileBtn = document.getElementById("playerProfileBtn");
+
+    const statAge = document.getElementById("statAge");
+    const statTeam = document.getElementById("statTeam");
+    const statHeight = document.getElementById("statHeight");
+    const statPosition = document.getElementById("statPosition");
+    const statLeague = document.getElementById("statLeague");
+    const statGoals = document.getElementById("statGoals");
+    const statAssists = document.getElementById("statAssists");
+    const statMinutes = document.getElementById("statMinutes");
+    const statYellow = document.getElementById("statYellow");
+    const statRed = document.getElementById("statRed");
+
+    function uniqueTeams() {
+      return [...new Set(players.map(player => player.team))].sort();
+    }
+
+    function populateTeams() {
+      uniqueTeams().forEach(team => {
+        const option = document.createElement("option");
+        option.value = team;
+        option.textContent = team;
+        teamFilter.appendChild(option);
+      });
+    }
+
+    function getFilteredPlayers() {
+      const searchValue = playerSearch.value.trim().toLowerCase();
+      const teamValue = teamFilter.value;
+
+      return players.filter(player => {
+        const matchesSearch = player.name.toLowerCase().includes(searchValue);
+        const matchesTeam = teamValue === "all" || player.team === teamValue;
+        return matchesSearch && matchesTeam;
+      });
+    }
+
+    function populatePlayerSelect(filteredPlayers) {
+      playerSelect.innerHTML = "";
+
+      if (filteredPlayers.length === 0) {
+        const option = document.createElement("option");
+        option.value = "";
+        option.textContent = "No players found";
+        playerSelect.appendChild(option);
+        return;
+      }
+
+      filteredPlayers.forEach((player, index) => {
+        const option = document.createElement("option");
+        option.value = player.name;
+        option.textContent = `${player.name} - ${player.team}`;
+        if (index === 0) option.selected = true;
+        playerSelect.appendChild(option);
+      });
+    }
+
+    function renderPlayer(player) {
+      if (!player) return;
+
+      playerName.textContent = player.name;
+      playerClub.textContent = player.team;
+      playerPhoto.src = player.image;
+      playerPhoto.alt = player.name;
+      playerImageLink.href = player.link;
+      playerProfileBtn.href = player.link;
+
+      statAge.textContent = player.age;
+      statTeam.textContent = player.team;
+      statHeight.textContent = player.height;
+      statPosition.textContent = player.position;
+      statLeague.textContent = player.league;
+      statGoals.textContent = player.goals;
+      statAssists.textContent = player.assists;
+      statMinutes.textContent = player.minutes;
+      statYellow.textContent = player.yellowCards;
+      statRed.textContent = player.redCards;
+    }
+
+    function refreshPlayerUI() {
+      const filteredPlayers = getFilteredPlayers();
+      populatePlayerSelect(filteredPlayers);
+
+      if (filteredPlayers.length > 0) {
+        renderPlayer(filteredPlayers[0]);
+      }
+    }
+
+    playerSearch.addEventListener("input", refreshPlayerUI);
+
+    teamFilter.addEventListener("change", () => {
+      refreshPlayerUI();
+    });
+
+    playerSelect.addEventListener("change", () => {
+      const selectedName = playerSelect.value;
+      const filteredPlayers = getFilteredPlayers();
+      const selectedPlayer = filteredPlayers.find(player => player.name === selectedName);
+      renderPlayer(selectedPlayer || filteredPlayers[0]);
+    });
+
+    populateTeams();
+    refreshPlayerUI();
+  </script>
 </body>
 </html>
-
