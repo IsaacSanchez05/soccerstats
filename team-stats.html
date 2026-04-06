@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SoccerStats | Team Stats</title>
-   <!-- Author: Isaac Sanchez  -->
+  <!-- Author: Isaac Sanchez -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -15,71 +15,113 @@
       <span class="brand-name">SoccerStats</span>
     </div>
 
-     <nav class="top-nav" aria-label="Primary">
+    <nav class="top-nav" aria-label="Primary">
       <a class="nav-link" href="index.html">Home</a>
       <a class="nav-link active" href="team-stats.html" aria-current="page">Team Stats</a>
       <a class="nav-link" href="player-stats.html">Player Stats</a>
       <a class="nav-link" href="compare.html">Compare Players</a>
       <a class="nav-link" href="contact.html">Contact Us</a>
     </nav>
-    
   </header>
 
   <main class="page">
     <h1 class="page-title">Team Stats</h1>
 
-    <section class="search-row" aria-label="Search for team">
-      <span class="search-label">Search for Team</span>
-      <span class="search-icon" aria-hidden="true">Q</span>
+    <section class="section-head" aria-label="LALIGA teams">
+      <h2>All LALIGA Teams</h2>
+      <p class="muted">Click any team crest to open its official LALIGA stats page</p>
     </section>
 
-    <section class="stats-layout" aria-label="Team stats layout">
-      <div class="team-logo-wrap">
-        <img class="team-logo-large" src="images/teams/barcelona.png" alt="FC Barcelona crest" />
-      </div>
+    <section class="teams-grid all-teams-grid" aria-label="All LALIGA team logos">
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/athletic-club/stats" target="_blank" rel="noopener noreferrer" aria-label="View Athletic Club stats">
+        <img class="team-logo" src="images/teams/athleticclub.png" alt="Athletic Club crest" />
+      </a>
 
-      <div class="team-card" role="region" aria-label="Team stats card">
-        <h2 class="team-card-title">Team</h2>
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/atletico-de-madrid/stats" target="_blank" rel="noopener noreferrer" aria-label="View Atlético de Madrid stats">
+        <img class="team-logo" src="images/teams/atletico.png" alt="Atlético de Madrid crest" />
+      </a>
 
-        <div class="team-card-columns">
-          <ul class="stat-list">
-            <li>Wins</li>
-            <li>Losses</li>
-            <li>Seed</li>
-            <li>Games</li>
-            <li>League</li>
-          </ul>
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/c-a-osasuna/stats" target="_blank" rel="noopener noreferrer" aria-label="View CA Osasuna stats">
+        <img class="team-logo" src="images/teams/osasuna.png" alt="CA Osasuna crest" />
+      </a>
 
-          <ul class="stat-list">
-            <li>Goals</li>
-            <li>Assists</li>
-            <li>Minutes</li>
-            <li>Yellow Cards</li>
-            <li>Red Cards</li>
-          </ul>
-        </div>
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/rc-celta/stats" target="_blank" rel="noopener noreferrer" aria-label="View Celta stats">
+        <img class="team-logo" src="images/teams/celta.png" alt="Celta crest" />
+      </a>
 
-        <button class="select-team-btn" type="button">Select New Team</button>
-      </div>
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/d-alaves/stats" target="_blank" rel="noopener noreferrer" aria-label="View Deportivo Alavés stats">
+        <img class="team-logo" src="images/teams/alaves.png" alt="Deportivo Alavés crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/elche-c-f/stats" target="_blank" rel="noopener noreferrer" aria-label="View Elche CF stats">
+        <img class="team-logo" src="images/teams/elche.png" alt="Elche CF crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/fc-barcelona/stats" target="_blank" rel="noopener noreferrer" aria-label="View FC Barcelona stats">
+        <img class="team-logo" src="images/teams/barcelona.png" alt="FC Barcelona crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/getafe-cf/stats" target="_blank" rel="noopener noreferrer" aria-label="View Getafe CF stats">
+        <img class="team-logo" src="images/teams/getafe.png" alt="Getafe CF crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/girona-fc/stats" target="_blank" rel="noopener noreferrer" aria-label="View Girona FC stats">
+        <img class="team-logo" src="images/teams/girona.png" alt="Girona FC crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/levante-ud/stats" target="_blank" rel="noopener noreferrer" aria-label="View Levante UD stats">
+        <img class="team-logo" src="images/teams/levante.png" alt="Levante UD crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/rayo-vallecano/stats" target="_blank" rel="noopener noreferrer" aria-label="View Rayo Vallecano stats">
+        <img class="team-logo" src="images/teams/rayo.png" alt="Rayo Vallecano crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/rcd-espanyol/stats" target="_blank" rel="noopener noreferrer" aria-label="View RCD Espanyol de Barcelona stats">
+        <img class="team-logo" src="images/teams/espanyol.png" alt="RCD Espanyol de Barcelona crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/rcd-mallorca/stats" target="_blank" rel="noopener noreferrer" aria-label="View RCD Mallorca stats">
+        <img class="team-logo" src="images/teams/mallorca.png" alt="RCD Mallorca crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/real-betis/stats" target="_blank" rel="noopener noreferrer" aria-label="View Real Betis stats">
+        <img class="team-logo" src="images/teams/betis.png" alt="Real Betis crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/real-madrid/stats" target="_blank" rel="noopener noreferrer" aria-label="View Real Madrid stats">
+        <img class="team-logo" src="images/teams/realmadrid.png" alt="Real Madrid crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/real-oviedo/stats" target="_blank" rel="noopener noreferrer" aria-label="View Real Oviedo stats">
+        <img class="team-logo" src="images/teams/realoviedo.png" alt="Real Oviedo crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/real-sociedad/stats" target="_blank" rel="noopener noreferrer" aria-label="View Real Sociedad stats">
+        <img class="team-logo" src="images/teams/realsociedad.png" alt="Real Sociedad crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/sevilla-fc/stats" target="_blank" rel="noopener noreferrer" aria-label="View Sevilla FC stats">
+        <img class="team-logo" src="images/teams/sevilla.png" alt="Sevilla FC crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/valencia-cf/stats" target="_blank" rel="noopener noreferrer" aria-label="View Valencia CF stats">
+        <img class="team-logo" src="images/teams/valencia.png" alt="Valencia CF crest" />
+      </a>
+
+      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/villarreal-cf/stats" target="_blank" rel="noopener noreferrer" aria-label="View Villarreal CF stats">
+        <img class="team-logo" src="images/teams/villarreal.png" alt="Villarreal CF crest" />
+      </a>
     </section>
   </main>
 
   <footer class="site-footer">
     <nav class="footer-left" aria-label="Social links">
-      <a class="social" href="#" aria-label="X">X</a>
-      <a class="social" href="#" aria-label="Instagram">◎</a>
-      <a class="social" href="#" aria-label="YouTube">▶</a>
-      <a class="social" href="#" aria-label="LinkedIn">in</a>
+      <a class="social" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+      <a class="social" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+      <a class="social" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+      <a class="social" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
     </nav>
-
-    <div class="footer-links">
-      <a href="#" class="footer-link">Explore</a>
-      <a href="#" class="footer-link">Resources</a>
-    </div>
-
-    <div class="footer-right" aria-hidden="true"></div>
   </footer>
 </body>
-
 </html>
-
