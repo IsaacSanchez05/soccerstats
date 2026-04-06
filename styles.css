@@ -156,12 +156,28 @@ img {
   align-items: center;
 }
 
+.team-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.team-link:hover,
+.team-link:focus {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 .team-logo {
   width: 100%;
   max-width: 110px;
   aspect-ratio: 1 / 1;
   object-fit: contain;
   justify-self: center;
+  cursor: pointer;
 }
 
 /* Players grid */
@@ -171,12 +187,27 @@ img {
   gap: 12px;
 }
 
+.player-link {
+  display: block;
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.player-link:hover,
+.player-link:focus {
+  transform: scale(1.03);
+  opacity: 0.92;
+}
+
 .player-img {
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border: 1px solid var(--line);
   border-radius: 6px;
+  cursor: pointer;
 }
 
 /* Search row */
@@ -298,6 +329,14 @@ img {
   color: #fff;
   text-decoration: none;
   font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.social:hover,
+.social:focus {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
 }
 
 .footer-links {
