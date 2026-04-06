@@ -304,23 +304,24 @@ img {
 .site-footer {
   background: var(--blue);
   color: #fff;
-  padding: 12px 18px;
+  padding: 16px 18px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
 }
 
 .footer-left {
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .social {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 4px;
   display: inline-flex;
@@ -337,18 +338,6 @@ img {
 .social:focus {
   background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
-}
-
-.footer-links {
-  display: flex;
-  gap: 32px;
-  font-size: 0.95rem;
-  flex-wrap: wrap;
-}
-
-.footer-link {
-  color: #fff;
-  text-decoration: none;
 }
 
 /* Contact page */
@@ -495,10 +484,6 @@ img {
     gap: 20px;
   }
 
-  .footer-links {
-    gap: 20px;
-  }
-
   .search-row {
     gap: 20px;
   }
@@ -564,8 +549,7 @@ img {
     text-align: center;
   }
 
-  .footer-left,
-  .footer-links {
+  .footer-left {
     justify-content: center;
   }
 
