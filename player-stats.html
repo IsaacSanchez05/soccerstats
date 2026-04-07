@@ -59,6 +59,11 @@
             <option value="">Select a player</option>
           </select>
         </div>
+
+        <div class="filter-group">
+          <label class="filter-label" for="resetPlayerFilters">Actions</label>
+          <button id="resetPlayerFilters" class="form-reset" type="button">Reset Filters</button>
+        </div>
       </div>
     </section>
 
@@ -96,6 +101,10 @@
           <div class="player-stat-item"><span class="player-stat-label">Yellow Cards</span><span id="statYellow" class="player-stat-value">—</span></div>
           <div class="player-stat-item"><span class="player-stat-label">Red Cards</span><span id="statRed" class="player-stat-value">—</span></div>
         </div>
+
+        <p id="playerEmptyState" class="muted" style="display:none; margin-top:16px;">
+          No players match this search yet for the selected team.
+        </p>
       </div>
     </section>
   </main>
@@ -181,6 +190,8 @@
     const playerSearch = document.getElementById("playerSearch");
     const teamFilter = document.getElementById("teamFilter");
     const playerSelect = document.getElementById("playerSelect");
+    const resetPlayerFilters = document.getElementById("resetPlayerFilters");
+    const playerEmptyState = document.getElementById("playerEmptyState");
 
     const playerName = document.getElementById("playerName");
     const playerClub = document.getElementById("playerClub");
@@ -243,13 +254,18 @@
 
     function populatePlayerSelect(players) {
       playerSelect.innerHTML = "";
+
       if (!players.length) {
         const option = document.createElement("option");
         option.value = "";
         option.textContent = "No players added yet";
         playerSelect.appendChild(option);
+        playerEmptyState.style.display = "block";
         return;
       }
+
+      playerEmptyState.style.display = "none";
+
       players.forEach((player, index) => {
         const option = document.createElement("option");
         option.value = player.name;
@@ -332,6 +348,13 @@
       if (!team) return;
       const player = team.players.find(p => p.name === playerSelect.value) || team.players[0];
       renderPlayer(player, team);
+    });
+
+    resetPlayerFilters.addEventListener("click", () => {
+      playerSearch.value = "";
+      teamFilter.value = "real-madrid";
+      refreshPlayers();
+      highlightActiveTeam("real-madrid");
     });
 
     renderTeamGrid();
