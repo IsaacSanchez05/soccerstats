@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SoccerStats | Compare Players</title>
-  <!-- Author: Isaac Sanchez  -->
+  <!-- Author: Isaac Sanchez -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -27,62 +27,189 @@
   <main class="page">
     <h1 class="page-title">Compare Players</h1>
 
-    <section class="compare-layout" aria-label="Compare players section">
-      <!-- Player A -->
-      <article class="compare-panel" aria-label="Player A panel">
-        <img class="compare-photo" src="images/players/bellingham.jpg" alt="Player A" />
+    <section class="section-head compare-page-head">
+      <h2>Compare Two Players</h2>
+      <p class="muted">Choose a team and player on each side to compare their profiles and key stats</p>
+    </section>
 
-        <div class="compare-card">
-          <h2 class="compare-title">Player A</h2>
+    <section class="compare-top-controls" aria-label="Compare player filters">
+      <div class="compare-filter-card">
+        <h3 class="compare-filter-title">Player A</h3>
 
-          <div class="compare-columns">
-            <ul class="stat-list">
-              <li>Age</li>
-              <li>Team</li>
-              <li>Height</li>
-              <li>Position</li>
-              <li>League</li>
-            </ul>
+        <div class="compare-filter-group">
+          <label class="filter-label" for="teamA">Team</label>
+          <select id="teamA" class="filter-select"></select>
+        </div>
 
-            <ul class="stat-list">
-              <li>Goals</li>
-              <li>Assist</li>
-              <li>Minutes</li>
-              <li>Yellow Cards</li>
-              <li>Red Cards</li>
-            </ul>
+        <div class="compare-filter-group">
+          <label class="filter-label" for="playerA">Player</label>
+          <select id="playerA" class="filter-select"></select>
+        </div>
+      </div>
+
+      <div class="compare-vs-badge" aria-hidden="true">VS</div>
+
+      <div class="compare-filter-card">
+        <h3 class="compare-filter-title">Player B</h3>
+
+        <div class="compare-filter-group">
+          <label class="filter-label" for="teamB">Team</label>
+          <select id="teamB" class="filter-select"></select>
+        </div>
+
+        <div class="compare-filter-group">
+          <label class="filter-label" for="playerB">Player</label>
+          <select id="playerB" class="filter-select"></select>
+        </div>
+      </div>
+    </section>
+
+    <section class="compare-summary-card" aria-label="Comparison summary">
+      <h2 class="compare-summary-title">Quick Comparison</h2>
+      <div class="compare-summary-grid">
+        <div class="compare-summary-item">
+          <span class="compare-summary-label">More Goals</span>
+          <span id="summaryGoals" class="compare-summary-value">—</span>
+        </div>
+        <div class="compare-summary-item">
+          <span class="compare-summary-label">More Assists</span>
+          <span id="summaryAssists" class="compare-summary-value">—</span>
+        </div>
+        <div class="compare-summary-item">
+          <span class="compare-summary-label">More Minutes</span>
+          <span id="summaryMinutes" class="compare-summary-value">—</span>
+        </div>
+        <div class="compare-summary-item">
+          <span class="compare-summary-label">Taller Player</span>
+          <span id="summaryHeight" class="compare-summary-value">—</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="compare-layout compare-layout-pro" aria-label="Compare players section">
+      <article class="compare-panel-pro" aria-label="Player A panel">
+        <a id="playerALink" class="compare-photo-link" href="#" target="_blank" rel="noopener noreferrer">
+          <img id="playerAPhoto" class="compare-photo-pro" src="images/players/bellingham.jpg" alt="Player A" />
+        </a>
+
+        <div class="compare-card-pro">
+          <div class="compare-card-header">
+            <div>
+              <p class="compare-kicker">Player A</p>
+              <h2 id="playerAName" class="compare-player-name">Jude Bellingham</h2>
+              <p id="playerATeamText" class="compare-player-team">Real Madrid</p>
+            </div>
+
+            <a id="playerAProfile" class="profile-link-btn" href="#" target="_blank" rel="noopener noreferrer">
+              View Official Stats
+            </a>
           </div>
 
-          <button class="select-team-btn" type="button">Select New Player</button>
+          <div class="compare-stat-grid">
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Age</span>
+              <span id="aAge" class="compare-stat-value">21</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Team</span>
+              <span id="aTeam" class="compare-stat-value">Real Madrid</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Height</span>
+              <span id="aHeight" class="compare-stat-value">186 cm</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Position</span>
+              <span id="aPosition" class="compare-stat-value">Midfielder</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">League</span>
+              <span id="aLeague" class="compare-stat-value">LALIGA EA SPORTS</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Goals</span>
+              <span id="aGoals" class="compare-stat-value">4</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Assists</span>
+              <span id="aAssists" class="compare-stat-value">3</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Minutes</span>
+              <span id="aMinutes" class="compare-stat-value">1291</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Yellow Cards</span>
+              <span id="aYellow" class="compare-stat-value">1</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Red Cards</span>
+              <span id="aRed" class="compare-stat-value">0</span>
+            </div>
+          </div>
         </div>
       </article>
 
-      <!-- Player B -->
-      <article class="compare-panel" aria-label="Player B panel">
-        <img class="compare-photo" src="images/players/mbappe.jpg" alt="Player B" />
+      <article class="compare-panel-pro" aria-label="Player B panel">
+        <a id="playerBLink" class="compare-photo-link" href="#" target="_blank" rel="noopener noreferrer">
+          <img id="playerBPhoto" class="compare-photo-pro" src="images/players/mbappe.jpg" alt="Player B" />
+        </a>
 
-        <div class="compare-card">
-          <h2 class="compare-title">Player B</h2>
+        <div class="compare-card-pro">
+          <div class="compare-card-header">
+            <div>
+              <p class="compare-kicker">Player B</p>
+              <h2 id="playerBName" class="compare-player-name">Kylian Mbappé</h2>
+              <p id="playerBTeamText" class="compare-player-team">Real Madrid</p>
+            </div>
 
-          <div class="compare-columns">
-            <ul class="stat-list">
-              <li>Age</li>
-              <li>Team</li>
-              <li>Height</li>
-              <li>Position</li>
-              <li>League</li>
-            </ul>
-
-            <ul class="stat-list">
-              <li>Goals</li>
-              <li>Assist</li>
-              <li>Minutes</li>
-              <li>Yellow Cards</li>
-              <li>Red Cards</li>
-            </ul>
+            <a id="playerBProfile" class="profile-link-btn" href="#" target="_blank" rel="noopener noreferrer">
+              View Official Stats
+            </a>
           </div>
 
-          <button class="select-team-btn" type="button">Select New Player</button>
+          <div class="compare-stat-grid">
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Age</span>
+              <span id="bAge" class="compare-stat-value">26</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Team</span>
+              <span id="bTeam" class="compare-stat-value">Real Madrid</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Height</span>
+              <span id="bHeight" class="compare-stat-value">178 cm</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Position</span>
+              <span id="bPosition" class="compare-stat-value">Forward</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">League</span>
+              <span id="bLeague" class="compare-stat-value">LALIGA EA SPORTS</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Goals</span>
+              <span id="bGoals" class="compare-stat-value">22</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Assists</span>
+              <span id="bAssists" class="compare-stat-value">3</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Minutes</span>
+              <span id="bMinutes" class="compare-stat-value">2537</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Yellow Cards</span>
+              <span id="bYellow" class="compare-stat-value">3</span>
+            </div>
+            <div class="compare-stat-box">
+              <span class="compare-stat-label">Red Cards</span>
+              <span id="bRed" class="compare-stat-value">1</span>
+            </div>
+          </div>
         </div>
       </article>
     </section>
@@ -90,20 +217,359 @@
 
   <footer class="site-footer">
     <nav class="footer-left" aria-label="Social links">
-      <a class="social" href="#" aria-label="X">X</a>
-      <a class="social" href="#" aria-label="Instagram">◎</a>
-      <a class="social" href="#" aria-label="YouTube">▶</a>
-      <a class="social" href="#" aria-label="LinkedIn">in</a>
+      <a class="social" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+      <a class="social" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+      <a class="social" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+      <a class="social" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
     </nav>
-
-    <div class="footer-links">
-      <a href="#" class="footer-link">Explore</a>
-      <a href="#" class="footer-link">Resources</a>
-    </div>
-
-    <div class="footer-right" aria-hidden="true"></div>
   </footer>
-</body>
 
+  <script>
+    const teams = [
+      {
+        id: "athletic-club",
+        name: "Athletic Club",
+        players: [
+          {
+            name: "Oihan Sancet",
+            age: "24",
+            height: "188 cm",
+            position: "Midfielder",
+            league: "LALIGA EA SPORTS",
+            goals: "15",
+            assists: "1",
+            minutes: "1894",
+            yellowCards: "5",
+            redCards: "0",
+            image: "images/players/sancet.jpg",
+            link: "https://www.laliga.com/en-GB/player/oihan-sancet"
+          },
+          {
+            name: "Nico Williams",
+            age: "22",
+            height: "181 cm",
+            position: "Forward",
+            league: "LALIGA EA SPORTS",
+            goals: "5",
+            assists: "5",
+            minutes: "1671",
+            yellowCards: "1",
+            redCards: "0",
+            image: "images/players/nicowilliams.jpg",
+            link: "https://www.laliga.com/en-GB/player/nico-williams"
+          }
+        ]
+      },
+      {
+        id: "atletico-de-madrid",
+        name: "Atlético de Madrid",
+        players: [
+          {
+            name: "Julián Alvarez",
+            age: "25",
+            height: "170 cm",
+            position: "Forward",
+            league: "LALIGA EA SPORTS",
+            goals: "15",
+            assists: "2",
+            minutes: "2313",
+            yellowCards: "7",
+            redCards: "0",
+            image: "images/players/julianalvarez.jpg",
+            link: "https://www.laliga.com/en-GB/player/julian-alvarez"
+          },
+          {
+            name: "Antoine Griezmann",
+            age: "34",
+            height: "176 cm",
+            position: "Forward",
+            league: "LALIGA EA SPORTS",
+            goals: "8",
+            assists: "6",
+            minutes: "2316",
+            yellowCards: "2",
+            redCards: "0",
+            image: "images/players/griezmann.jpg",
+            link: "https://www.laliga.com/en-GB/player/antoine-griezmann"
+          }
+        ]
+      },
+      {
+        id: "fc-barcelona",
+        name: "FC Barcelona",
+        players: [
+          {
+            name: "Pedri",
+            age: "22",
+            height: "174 cm",
+            position: "Midfielder",
+            league: "LALIGA EA SPORTS",
+            goals: "4",
+            assists: "5",
+            minutes: "2614",
+            yellowCards: "3",
+            redCards: "1",
+            image: "images/players/pedri.jpg",
+            link: "https://www.laliga.com/en-GB/player/pedri"
+          },
+          {
+            name: "Gavi",
+            age: "20",
+            height: "173 cm",
+            position: "Midfielder",
+            league: "LALIGA EA SPORTS",
+            goals: "1",
+            assists: "1",
+            minutes: "993",
+            yellowCards: "4",
+            redCards: "0",
+            image: "images/players/gavi.jpg",
+            link: "https://www.laliga.com/en-GB/player/gavi"
+          },
+          {
+            name: "Dani Olmo",
+            age: "26",
+            height: "179 cm",
+            position: "Midfielder",
+            league: "LALIGA EA SPORTS",
+            goals: "9",
+            assists: "2",
+            minutes: "1277",
+            yellowCards: "1",
+            redCards: "0",
+            image: "images/players/olmo.jpg",
+            link: "https://www.laliga.com/en-GB/player/dani-olmo"
+          }
+        ]
+      },
+      {
+        id: "real-madrid",
+        name: "Real Madrid",
+        players: [
+          {
+            name: "Jude Bellingham",
+            age: "21",
+            height: "186 cm",
+            position: "Midfielder",
+            league: "LALIGA EA SPORTS",
+            goals: "4",
+            assists: "3",
+            minutes: "1291",
+            yellowCards: "1",
+            redCards: "0",
+            image: "images/players/bellingham.jpg",
+            link: "https://www.laliga.com/en-GB/player/jude-bellingham"
+          },
+          {
+            name: "Kylian Mbappé",
+            age: "26",
+            height: "178 cm",
+            position: "Forward",
+            league: "LALIGA EA SPORTS",
+            goals: "22",
+            assists: "3",
+            minutes: "2537",
+            yellowCards: "3",
+            redCards: "1",
+            image: "images/players/mbappe.jpg",
+            link: "https://www.laliga.com/en-GB/player/kylian-mbappe-lottin"
+          },
+          {
+            name: "Vinícius Júnior",
+            age: "24",
+            height: "176 cm",
+            position: "Forward",
+            league: "LALIGA EA SPORTS",
+            goals: "10",
+            assists: "5",
+            minutes: "1966",
+            yellowCards: "8",
+            redCards: "1",
+            image: "images/players/vinicius.jpg",
+            link: "https://www.laliga.com/en-GB/player/vini-jr"
+          },
+          {
+            name: "Rodrygo",
+            age: "24",
+            height: "174 cm",
+            position: "Forward",
+            league: "LALIGA EA SPORTS",
+            goals: "6",
+            assists: "5",
+            minutes: "1727",
+            yellowCards: "0",
+            redCards: "0",
+            image: "images/players/rodrygo.jpg",
+            link: "https://www.laliga.com/en-GB/player/rodrygo"
+          },
+          {
+            name: "Eduardo Camavinga",
+            age: "22",
+            height: "182 cm",
+            position: "Midfielder",
+            league: "LALIGA EA SPORTS",
+            goals: "0",
+            assists: "2",
+            minutes: "1166",
+            yellowCards: "5",
+            redCards: "0",
+            image: "images/players/camavinga.jpg",
+            link: "https://www.laliga.com/en-GB/player/eduardo-camavinga"
+          }
+        ]
+      }
+    ];
+
+    const teamA = document.getElementById("teamA");
+    const teamB = document.getElementById("teamB");
+    const playerA = document.getElementById("playerA");
+    const playerB = document.getElementById("playerB");
+
+    function populateTeamSelect(selectEl) {
+      selectEl.innerHTML = "";
+      teams.forEach(team => {
+        const option = document.createElement("option");
+        option.value = team.id;
+        option.textContent = team.name;
+        selectEl.appendChild(option);
+      });
+    }
+
+    function populatePlayerSelect(teamId, selectEl, defaultName = "") {
+      const team = teams.find(t => t.id === teamId);
+      selectEl.innerHTML = "";
+
+      if (!team || !team.players.length) {
+        const option = document.createElement("option");
+        option.value = "";
+        option.textContent = "No players available";
+        selectEl.appendChild(option);
+        return;
+      }
+
+      team.players.forEach((player, index) => {
+        const option = document.createElement("option");
+        option.value = player.name;
+        option.textContent = player.name;
+        if ((defaultName && player.name === defaultName) || (!defaultName && index === 0)) {
+          option.selected = true;
+        }
+        selectEl.appendChild(option);
+      });
+    }
+
+    function getPlayer(teamId, playerName) {
+      const team = teams.find(t => t.id === teamId);
+      if (!team) return null;
+      return team.players.find(player => player.name === playerName) || team.players[0] || null;
+    }
+
+    function setText(id, value) {
+      document.getElementById(id).textContent = value;
+    }
+
+    function renderCard(side, teamId, playerName) {
+      const team = teams.find(t => t.id === teamId);
+      const player = getPlayer(teamId, playerName);
+
+      if (!team || !player) return;
+
+      document.getElementById(`player${side}Photo`).src = player.image;
+      document.getElementById(`player${side}Photo`).alt = player.name;
+      document.getElementById(`player${side}Link`).href = player.link;
+      document.getElementById(`player${side}Profile`).href = player.link;
+
+      setText(`player${side}Name`, player.name);
+      setText(`player${side}TeamText`, team.name);
+
+      const prefix = side.toLowerCase();
+      setText(`${prefix}Age`, player.age);
+      setText(`${prefix}Team`, team.name);
+      setText(`${prefix}Height`, player.height);
+      setText(`${prefix}Position`, player.position);
+      setText(`${prefix}League`, player.league);
+      setText(`${prefix}Goals`, player.goals);
+      setText(`${prefix}Assists`, player.assists);
+      setText(`${prefix}Minutes`, player.minutes);
+      setText(`${prefix}Yellow`, player.yellowCards);
+      setText(`${prefix}Red`, player.redCards);
+    }
+
+    function parseNumber(value) {
+      return Number(String(value).replace(/[^\d.]/g, "")) || 0;
+    }
+
+    function winnerText(aName, aValue, bName, bValue) {
+      if (aValue > bValue) return `${aName} (${aValue})`;
+      if (bValue > aValue) return `${bName} (${bValue})`;
+      return "Tie";
+    }
+
+    function updateSummary() {
+      const playerOne = getPlayer(teamA.value, playerA.value);
+      const playerTwo = getPlayer(teamB.value, playerB.value);
+
+      if (!playerOne || !playerTwo) return;
+
+      document.getElementById("summaryGoals").textContent = winnerText(
+        playerOne.name,
+        parseNumber(playerOne.goals),
+        playerTwo.name,
+        parseNumber(playerTwo.goals)
+      );
+
+      document.getElementById("summaryAssists").textContent = winnerText(
+        playerOne.name,
+        parseNumber(playerOne.assists),
+        playerTwo.name,
+        parseNumber(playerTwo.assists)
+      );
+
+      document.getElementById("summaryMinutes").textContent = winnerText(
+        playerOne.name,
+        parseNumber(playerOne.minutes),
+        playerTwo.name,
+        parseNumber(playerTwo.minutes)
+      );
+
+      document.getElementById("summaryHeight").textContent = winnerText(
+        playerOne.name,
+        parseNumber(playerOne.height),
+        playerTwo.name,
+        parseNumber(playerTwo.height)
+      );
+    }
+
+    function refreshCompare() {
+      renderCard("A", teamA.value, playerA.value);
+      renderCard("B", teamB.value, playerB.value);
+      updateSummary();
+    }
+
+    teamA.addEventListener("change", () => {
+      populatePlayerSelect(teamA.value, playerA);
+      refreshCompare();
+    });
+
+    teamB.addEventListener("change", () => {
+      populatePlayerSelect(teamB.value, playerB);
+      refreshCompare();
+    });
+
+    playerA.addEventListener("change", refreshCompare);
+    playerB.addEventListener("change", refreshCompare);
+
+    populateTeamSelect(teamA);
+    populateTeamSelect(teamB);
+
+    teamA.value = "real-madrid";
+    teamB.value = "real-madrid";
+
+    populatePlayerSelect("real-madrid", playerA, "Jude Bellingham");
+    populatePlayerSelect("real-madrid", playerB, "Kylian Mbappé");
+
+    refreshCompare();
+  </script>
+</body>
 </html>
 
