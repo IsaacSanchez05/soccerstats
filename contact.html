@@ -32,7 +32,7 @@
       </p>
     </section>
 
-    <section class="contact-layout">
+    <section class="contact-layout" aria-label="Contact section">
       <aside class="contact-info-card" aria-label="Contact information">
         <p class="contact-kicker">Get In Touch</p>
         <h2 class="contact-info-title">We’d love to hear from you</h2>
@@ -59,7 +59,7 @@
       </aside>
 
       <section class="contact-card-pro" aria-label="Contact form panel">
-        <form id="contactForm" novalidate>
+        <form id="contactForm" action="#" method="post" novalidate>
           <div class="contact-form-header">
             <h2 class="contact-form-title">Send a Message</h2>
             <p class="contact-form-text">
@@ -70,26 +70,47 @@
           <div class="contact-grid">
             <div class="form-group">
               <label class="form-label" for="firstName">First Name</label>
-              <input class="form-input" id="firstName" type="text" placeholder="Enter your first name" required />
+              <input
+                class="form-input"
+                id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="Enter your first name"
+                required
+              />
               <small class="form-error" id="firstNameError"></small>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="lastName">Last Name</label>
-              <input class="form-input" id="lastName" type="text" placeholder="Enter your last name" required />
+              <input
+                class="form-input"
+                id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="Enter your last name"
+                required
+              />
               <small class="form-error" id="lastNameError"></small>
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="email">Email Address</label>
-            <input class="form-input" id="email" type="email" placeholder="Enter your email" required />
+            <input
+              class="form-input"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
             <small class="form-error" id="emailError"></small>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="topic">Topic</label>
-            <select class="form-input" id="topic" required>
+            <select class="form-input" id="topic" name="topic" required>
               <option value="">Select a topic</option>
               <option value="feedback">General Feedback</option>
               <option value="bug">Bug Report</option>
@@ -101,7 +122,14 @@
 
           <div class="form-group">
             <label class="form-label" for="message">Message</label>
-            <textarea class="form-textarea" id="message" rows="6" placeholder="Write your message here..." required></textarea>
+            <textarea
+              class="form-textarea"
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
             <small class="form-error" id="messageError"></small>
           </div>
 
@@ -162,7 +190,7 @@
     }
 
     function clearErrors() {
-      fields.forEach(field => {
+      fields.forEach(function (field) {
         field.error.textContent = "";
         field.input.classList.remove("input-error");
       });
@@ -173,7 +201,7 @@
       let isValid = true;
       clearErrors();
 
-      fields.forEach(field => {
+      fields.forEach(function (field) {
         if (!field.input.value.trim()) {
           field.error.textContent = field.message;
           field.input.classList.add("input-error");
@@ -193,12 +221,18 @@
 
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
-      if (!validateForm()) return;
+
+      if (!validateForm()) {
+        return;
+      }
+
       formSuccess.textContent = "Your message has been submitted successfully.";
       contactForm.reset();
     });
 
-    contactForm.addEventListener("reset", clearErrors);
+    contactForm.addEventListener("reset", function () {
+      clearErrors();
+    });
   </script>
 </body>
 </html>
