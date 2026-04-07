@@ -58,6 +58,11 @@
       </div>
     </section>
 
+    <section class="compare-actions-bar" aria-label="Compare actions">
+      <button id="swapPlayersBtn" class="form-submit" type="button">Swap Players</button>
+      <button id="resetCompareBtn" class="form-reset" type="button">Reset Compare</button>
+    </section>
+
     <section class="compare-summary-card">
       <h2 class="compare-summary-title">Quick Comparison</h2>
       <div class="compare-summary-grid">
@@ -184,6 +189,8 @@
     const teamB = document.getElementById("teamB");
     const playerA = document.getElementById("playerA");
     const playerB = document.getElementById("playerB");
+    const swapPlayersBtn = document.getElementById("swapPlayersBtn");
+    const resetCompareBtn = document.getElementById("resetCompareBtn");
 
     function populateTeamSelect(selectEl) {
       selectEl.innerHTML = "";
@@ -198,6 +205,7 @@
     function populatePlayerSelect(teamId, selectEl, defaultName = "") {
       const team = teams.find(t => t.id === teamId);
       selectEl.innerHTML = "";
+
       if (!team || !team.players.length) {
         const option = document.createElement("option");
         option.value = "";
@@ -230,6 +238,7 @@
     function renderCard(side, teamId, playerName) {
       const team = teams.find(t => t.id === teamId);
       const player = getPlayer(teamId, playerName);
+
       if (!team || !player) return;
 
       document.getElementById(`player${side}Photo`).src = player.image;
@@ -293,13 +302,40 @@
     playerA.addEventListener("change", refreshCompare);
     playerB.addEventListener("change", refreshCompare);
 
+    swapPlayersBtn.addEventListener("click", () => {
+      const currentTeamA = teamA.value;
+      const currentPlayerA = playerA.value;
+      const currentTeamB = teamB.value;
+      const currentPlayerB = playerB.value;
+
+      teamA.value = currentTeamB;
+      teamB.value = currentTeamA;
+
+      populatePlayerSelect(teamA.value, playerA, currentPlayerB);
+      populatePlayerSelect(teamB.value, playerB, currentPlayerA);
+
+      refreshCompare();
+    });
+
+    resetCompareBtn.addEventListener("click", () => {
+      teamA.value = "real-madrid";
+      teamB.value = "real-madrid";
+
+      populatePlayerSelect("real-madrid", playerA, "Jude Bellingham");
+      populatePlayerSelect("real-madrid", playerB, "Kylian Mbappé");
+
+      refreshCompare();
+    });
+
     populateTeamSelect(teamA);
     populateTeamSelect(teamB);
 
     teamA.value = "real-madrid";
     teamB.value = "real-madrid";
+
     populatePlayerSelect("real-madrid", playerA, "Jude Bellingham");
     populatePlayerSelect("real-madrid", playerB, "Kylian Mbappé");
+
     refreshCompare();
   </script>
 </body>
