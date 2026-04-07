@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SoccerStats | Team Stats</title>
-  <!-- Author: Isaac Sanchez -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -25,93 +24,100 @@
   </header>
 
   <main class="page">
-    <h1 class="page-title">Team Stats</h1>
-
-    <section class="section-head" aria-label="LALIGA teams">
-      <h2>All LALIGA Teams</h2>
-      <p class="muted">Click any team crest to open its official LALIGA stats page</p>
+    <section class="hero-card">
+      <p class="hero-kicker">Club Directory</p>
+      <h1 class="page-title">Browse every LALIGA club.</h1>
+      <p class="page-subtitle">Click any crest to open that team’s official stats page.</p>
     </section>
 
-    <section class="teams-grid all-teams-grid" aria-label="All LALIGA team logos">
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/athletic-club/stats" target="_blank" rel="noopener noreferrer" aria-label="View Athletic Club stats">
-        <img class="team-logo" src="images/teams/athleticclub.png" alt="Athletic Club crest" />
-      </a>
+    <section class="panel-card">
+      <div class="section-head">
+        <h2>All Teams</h2>
+        <p class="muted">Official club stats links</p>
+      </div>
 
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/atletico-de-madrid/stats" target="_blank" rel="noopener noreferrer" aria-label="View Atlético de Madrid stats">
-        <img class="team-logo" src="images/teams/atletico.png" alt="Atlético de Madrid crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/c-a-osasuna/stats" target="_blank" rel="noopener noreferrer" aria-label="View CA Osasuna stats">
-        <img class="team-logo" src="images/teams/osasuna.png" alt="CA Osasuna crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/rc-celta/stats" target="_blank" rel="noopener noreferrer" aria-label="View Celta stats">
-        <img class="team-logo" src="images/teams/celta.png" alt="Celta crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/d-alaves/stats" target="_blank" rel="noopener noreferrer" aria-label="View Deportivo Alavés stats">
-        <img class="team-logo" src="images/teams/alaves.png" alt="Deportivo Alavés crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/elche-c-f/stats" target="_blank" rel="noopener noreferrer" aria-label="View Elche CF stats">
-        <img class="team-logo" src="images/teams/elche.png" alt="Elche CF crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/fc-barcelona/stats" target="_blank" rel="noopener noreferrer" aria-label="View FC Barcelona stats">
-        <img class="team-logo" src="images/teams/barcelona.png" alt="FC Barcelona crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/getafe-cf/stats" target="_blank" rel="noopener noreferrer" aria-label="View Getafe CF stats">
-        <img class="team-logo" src="images/teams/getafe.png" alt="Getafe CF crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/girona-fc/stats" target="_blank" rel="noopener noreferrer" aria-label="View Girona FC stats">
-        <img class="team-logo" src="images/teams/girona.png" alt="Girona FC crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/levante-ud/stats" target="_blank" rel="noopener noreferrer" aria-label="View Levante UD stats">
-        <img class="team-logo" src="images/teams/levante.png" alt="Levante UD crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/rayo-vallecano/stats" target="_blank" rel="noopener noreferrer" aria-label="View Rayo Vallecano stats">
-        <img class="team-logo" src="images/teams/rayo.png" alt="Rayo Vallecano crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/rcd-espanyol/stats" target="_blank" rel="noopener noreferrer" aria-label="View RCD Espanyol de Barcelona stats">
-        <img class="team-logo" src="images/teams/espanyol.png" alt="RCD Espanyol de Barcelona crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/rcd-mallorca/stats" target="_blank" rel="noopener noreferrer" aria-label="View RCD Mallorca stats">
-        <img class="team-logo" src="images/teams/mallorca.png" alt="RCD Mallorca crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/real-betis/stats" target="_blank" rel="noopener noreferrer" aria-label="View Real Betis stats">
-        <img class="team-logo" src="images/teams/betis.png" alt="Real Betis crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/real-madrid/stats" target="_blank" rel="noopener noreferrer" aria-label="View Real Madrid stats">
-        <img class="team-logo" src="images/teams/realmadrid.png" alt="Real Madrid crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/real-oviedo/stats" target="_blank" rel="noopener noreferrer" aria-label="View Real Oviedo stats">
-        <img class="team-logo" src="images/teams/realoviedo.png" alt="Real Oviedo crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/real-sociedad/stats" target="_blank" rel="noopener noreferrer" aria-label="View Real Sociedad stats">
-        <img class="team-logo" src="images/teams/realsociedad.png" alt="Real Sociedad crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/sevilla-fc/stats" target="_blank" rel="noopener noreferrer" aria-label="View Sevilla FC stats">
-        <img class="team-logo" src="images/teams/sevilla.png" alt="Sevilla FC crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/valencia-cf/stats" target="_blank" rel="noopener noreferrer" aria-label="View Valencia CF stats">
-        <img class="team-logo" src="images/teams/valencia.png" alt="Valencia CF crest" />
-      </a>
-
-      <a class="team-link" href="https://www.laliga.com/en-GB/clubs/villarreal-cf/stats" target="_blank" rel="noopener noreferrer" aria-label="View Villarreal CF stats">
-        <img class="team-logo" src="images/teams/villarreal.png" alt="Villarreal CF crest" />
-      </a>
+      <section class="teams-grid all-teams-grid" aria-label="All LALIGA teams">
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/athletic-club/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/athleticclub.png" alt="Athletic Club" />
+          <span class="team-crest-name">Athletic Club</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/atletico-de-madrid/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/atletico.png" alt="Atlético de Madrid" />
+          <span class="team-crest-name">Atlético de Madrid</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/c-a-osasuna/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/osasuna.png" alt="CA Osasuna" />
+          <span class="team-crest-name">CA Osasuna</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/rc-celta/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/celta.png" alt="Celta" />
+          <span class="team-crest-name">Celta</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/d-alaves/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/alaves.png" alt="Deportivo Alavés" />
+          <span class="team-crest-name">Deportivo Alavés</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/elche-c-f/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/elche.png" alt="Elche CF" />
+          <span class="team-crest-name">Elche CF</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/fc-barcelona/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/barcelona.png" alt="FC Barcelona" />
+          <span class="team-crest-name">FC Barcelona</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/getafe-cf/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/getafe.png" alt="Getafe CF" />
+          <span class="team-crest-name">Getafe CF</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/girona-fc/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/girona.png" alt="Girona FC" />
+          <span class="team-crest-name">Girona FC</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/levante-ud/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/levante.png" alt="Levante UD" />
+          <span class="team-crest-name">Levante UD</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/rayo-vallecano/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/rayo.png" alt="Rayo Vallecano" />
+          <span class="team-crest-name">Rayo Vallecano</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/rcd-espanyol/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/espanyol.png" alt="Espanyol" />
+          <span class="team-crest-name">Espanyol</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/rcd-mallorca/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/mallorca.png" alt="Mallorca" />
+          <span class="team-crest-name">Mallorca</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/real-betis/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/betis.png" alt="Real Betis" />
+          <span class="team-crest-name">Real Betis</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/real-madrid/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/realmadrid.png" alt="Real Madrid" />
+          <span class="team-crest-name">Real Madrid</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/real-oviedo/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/realoviedo.png" alt="Real Oviedo" />
+          <span class="team-crest-name">Real Oviedo</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/real-sociedad/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/realsociedad.png" alt="Real Sociedad" />
+          <span class="team-crest-name">Real Sociedad</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/sevilla-fc/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/sevilla.png" alt="Sevilla FC" />
+          <span class="team-crest-name">Sevilla FC</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/valencia-cf/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/valencia.png" alt="Valencia CF" />
+          <span class="team-crest-name">Valencia CF</span>
+        </a>
+        <a class="team-link team-link-column" href="https://www.laliga.com/en-GB/clubs/villarreal-cf/stats" target="_blank" rel="noopener noreferrer">
+          <img class="team-logo" src="images/teams/villarreal.png" alt="Villarreal CF" />
+          <span class="team-crest-name">Villarreal CF</span>
+        </a>
+      </section>
     </section>
   </main>
 
