@@ -27,11 +27,13 @@
     <section class="hero-card">
       <p class="hero-kicker">Contact</p>
       <h1 class="page-title">Let’s improve SoccerStats together.</h1>
-      <p class="page-subtitle">Send feedback, report bugs, or suggest new features.</p>
+      <p class="page-subtitle">
+        Send feedback, report bugs, or suggest new features.
+      </p>
     </section>
 
     <section class="contact-layout">
-      <aside class="contact-info-card">
+      <aside class="contact-info-card" aria-label="Contact information">
         <p class="contact-kicker">Get In Touch</p>
         <h2 class="contact-info-title">We’d love to hear from you</h2>
         <p class="contact-info-text">
@@ -40,13 +42,15 @@
 
         <div class="contact-info-list">
           <div class="contact-info-item">
-            <span class="contact-info-label">Response Time</span>
-            <span class="contact-info-value">Usually within 1–2 days</span>
-          </div>
-          <div class="contact-info-item">
             <span class="contact-info-label">Best For</span>
-            <span class="contact-info-value">Feedback, bug reports, suggestions</span>
+            <span class="contact-info-value">Feedback, bugs, suggestions</span>
           </div>
+
+          <div class="contact-info-item">
+            <span class="contact-info-label">Typical Reply Window</span>
+            <span class="contact-info-value">1–2 days</span>
+          </div>
+
           <div class="contact-info-item">
             <span class="contact-info-label">Project</span>
             <span class="contact-info-value">SoccerStats</span>
@@ -54,11 +58,13 @@
         </div>
       </aside>
 
-      <section class="contact-card-pro">
+      <section class="contact-card-pro" aria-label="Contact form panel">
         <form id="contactForm" novalidate>
           <div class="contact-form-header">
             <h2 class="contact-form-title">Send a Message</h2>
-            <p class="contact-form-text">Fill out the form below and submit your message.</p>
+            <p class="contact-form-text">
+              Fill out the form below and submit your message.
+            </p>
           </div>
 
           <div class="contact-grid">
@@ -124,11 +130,31 @@
     const formSuccess = document.getElementById("formSuccess");
 
     const fields = [
-      { input: document.getElementById("firstName"), error: document.getElementById("firstNameError"), message: "Please enter your first name." },
-      { input: document.getElementById("lastName"), error: document.getElementById("lastNameError"), message: "Please enter your last name." },
-      { input: document.getElementById("email"), error: document.getElementById("emailError"), message: "Please enter a valid email address." },
-      { input: document.getElementById("topic"), error: document.getElementById("topicError"), message: "Please select a topic." },
-      { input: document.getElementById("message"), error: document.getElementById("messageError"), message: "Please enter your message." }
+      {
+        input: document.getElementById("firstName"),
+        error: document.getElementById("firstNameError"),
+        message: "Please enter your first name."
+      },
+      {
+        input: document.getElementById("lastName"),
+        error: document.getElementById("lastNameError"),
+        message: "Please enter your last name."
+      },
+      {
+        input: document.getElementById("email"),
+        error: document.getElementById("emailError"),
+        message: "Please enter a valid email address."
+      },
+      {
+        input: document.getElementById("topic"),
+        error: document.getElementById("topicError"),
+        message: "Please select a topic."
+      },
+      {
+        input: document.getElementById("message"),
+        error: document.getElementById("messageError"),
+        message: "Please enter your message."
+      }
     ];
 
     function validateEmail(email) {
