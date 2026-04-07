@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SoccerStats | Compare Players</title>
-  <!-- Author: Isaac Sanchez -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -25,38 +24,33 @@
   </header>
 
   <main class="page">
-    <h1 class="page-title">Compare Players</h1>
-
-    <section class="section-head compare-page-head">
-      <h2>Compare Two Players</h2>
-      <p class="muted">Choose a team and player on each side to compare their profiles and key stats</p>
+    <section class="hero-card">
+      <p class="hero-kicker">Head to Head</p>
+      <h1 class="page-title">Compare two players side by side.</h1>
+      <p class="page-subtitle">Switch teams, choose players, and quickly see who leads in key categories.</p>
     </section>
 
-    <section class="compare-top-controls" aria-label="Compare player filters">
+    <section class="compare-top-controls">
       <div class="compare-filter-card">
         <h3 class="compare-filter-title">Player A</h3>
-
         <div class="compare-filter-group">
           <label class="filter-label" for="teamA">Team</label>
           <select id="teamA" class="filter-select"></select>
         </div>
-
         <div class="compare-filter-group">
           <label class="filter-label" for="playerA">Player</label>
           <select id="playerA" class="filter-select"></select>
         </div>
       </div>
 
-      <div class="compare-vs-badge" aria-hidden="true">VS</div>
+      <div class="compare-vs-badge">VS</div>
 
       <div class="compare-filter-card">
         <h3 class="compare-filter-title">Player B</h3>
-
         <div class="compare-filter-group">
           <label class="filter-label" for="teamB">Team</label>
           <select id="teamB" class="filter-select"></select>
         </div>
-
         <div class="compare-filter-group">
           <label class="filter-label" for="playerB">Player</label>
           <select id="playerB" class="filter-select"></select>
@@ -64,30 +58,18 @@
       </div>
     </section>
 
-    <section class="compare-summary-card" aria-label="Comparison summary">
+    <section class="compare-summary-card">
       <h2 class="compare-summary-title">Quick Comparison</h2>
       <div class="compare-summary-grid">
-        <div class="compare-summary-item">
-          <span class="compare-summary-label">More Goals</span>
-          <span id="summaryGoals" class="compare-summary-value">—</span>
-        </div>
-        <div class="compare-summary-item">
-          <span class="compare-summary-label">More Assists</span>
-          <span id="summaryAssists" class="compare-summary-value">—</span>
-        </div>
-        <div class="compare-summary-item">
-          <span class="compare-summary-label">More Minutes</span>
-          <span id="summaryMinutes" class="compare-summary-value">—</span>
-        </div>
-        <div class="compare-summary-item">
-          <span class="compare-summary-label">Taller Player</span>
-          <span id="summaryHeight" class="compare-summary-value">—</span>
-        </div>
+        <div class="compare-summary-item"><span class="compare-summary-label">More Goals</span><span id="summaryGoals" class="compare-summary-value">—</span></div>
+        <div class="compare-summary-item"><span class="compare-summary-label">More Assists</span><span id="summaryAssists" class="compare-summary-value">—</span></div>
+        <div class="compare-summary-item"><span class="compare-summary-label">More Minutes</span><span id="summaryMinutes" class="compare-summary-value">—</span></div>
+        <div class="compare-summary-item"><span class="compare-summary-label">Taller Player</span><span id="summaryHeight" class="compare-summary-value">—</span></div>
       </div>
     </section>
 
-    <section class="compare-layout compare-layout-pro" aria-label="Compare players section">
-      <article class="compare-panel-pro" aria-label="Player A panel">
+    <section class="compare-layout-pro">
+      <article class="compare-panel-pro">
         <a id="playerALink" class="compare-photo-link" href="#" target="_blank" rel="noopener noreferrer">
           <img id="playerAPhoto" class="compare-photo-pro" src="images/players/bellingham.jpg" alt="Player A" />
         </a>
@@ -99,58 +81,25 @@
               <h2 id="playerAName" class="compare-player-name">Jude Bellingham</h2>
               <p id="playerATeamText" class="compare-player-team">Real Madrid</p>
             </div>
-
-            <a id="playerAProfile" class="profile-link-btn" href="#" target="_blank" rel="noopener noreferrer">
-              View Official Stats
-            </a>
+            <a id="playerAProfile" class="profile-link-btn" href="#" target="_blank" rel="noopener noreferrer">View Official Stats</a>
           </div>
 
           <div class="compare-stat-grid">
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Age</span>
-              <span id="aAge" class="compare-stat-value">21</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Team</span>
-              <span id="aTeam" class="compare-stat-value">Real Madrid</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Height</span>
-              <span id="aHeight" class="compare-stat-value">186 cm</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Position</span>
-              <span id="aPosition" class="compare-stat-value">Midfielder</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">League</span>
-              <span id="aLeague" class="compare-stat-value">LALIGA EA SPORTS</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Goals</span>
-              <span id="aGoals" class="compare-stat-value">4</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Assists</span>
-              <span id="aAssists" class="compare-stat-value">3</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Minutes</span>
-              <span id="aMinutes" class="compare-stat-value">1291</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Yellow Cards</span>
-              <span id="aYellow" class="compare-stat-value">1</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Red Cards</span>
-              <span id="aRed" class="compare-stat-value">0</span>
-            </div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Age</span><span id="aAge" class="compare-stat-value">21</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Team</span><span id="aTeam" class="compare-stat-value">Real Madrid</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Height</span><span id="aHeight" class="compare-stat-value">186 cm</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Position</span><span id="aPosition" class="compare-stat-value">Midfielder</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">League</span><span id="aLeague" class="compare-stat-value">LALIGA EA SPORTS</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Goals</span><span id="aGoals" class="compare-stat-value">4</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Assists</span><span id="aAssists" class="compare-stat-value">3</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Minutes</span><span id="aMinutes" class="compare-stat-value">1291</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Yellow Cards</span><span id="aYellow" class="compare-stat-value">1</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Red Cards</span><span id="aRed" class="compare-stat-value">0</span></div>
           </div>
         </div>
       </article>
 
-      <article class="compare-panel-pro" aria-label="Player B panel">
+      <article class="compare-panel-pro">
         <a id="playerBLink" class="compare-photo-link" href="#" target="_blank" rel="noopener noreferrer">
           <img id="playerBPhoto" class="compare-photo-pro" src="images/players/mbappe.jpg" alt="Player B" />
         </a>
@@ -162,53 +111,20 @@
               <h2 id="playerBName" class="compare-player-name">Kylian Mbappé</h2>
               <p id="playerBTeamText" class="compare-player-team">Real Madrid</p>
             </div>
-
-            <a id="playerBProfile" class="profile-link-btn" href="#" target="_blank" rel="noopener noreferrer">
-              View Official Stats
-            </a>
+            <a id="playerBProfile" class="profile-link-btn" href="#" target="_blank" rel="noopener noreferrer">View Official Stats</a>
           </div>
 
           <div class="compare-stat-grid">
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Age</span>
-              <span id="bAge" class="compare-stat-value">26</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Team</span>
-              <span id="bTeam" class="compare-stat-value">Real Madrid</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Height</span>
-              <span id="bHeight" class="compare-stat-value">178 cm</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Position</span>
-              <span id="bPosition" class="compare-stat-value">Forward</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">League</span>
-              <span id="bLeague" class="compare-stat-value">LALIGA EA SPORTS</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Goals</span>
-              <span id="bGoals" class="compare-stat-value">22</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Assists</span>
-              <span id="bAssists" class="compare-stat-value">3</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Minutes</span>
-              <span id="bMinutes" class="compare-stat-value">2537</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Yellow Cards</span>
-              <span id="bYellow" class="compare-stat-value">3</span>
-            </div>
-            <div class="compare-stat-box">
-              <span class="compare-stat-label">Red Cards</span>
-              <span id="bRed" class="compare-stat-value">1</span>
-            </div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Age</span><span id="bAge" class="compare-stat-value">26</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Team</span><span id="bTeam" class="compare-stat-value">Real Madrid</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Height</span><span id="bHeight" class="compare-stat-value">178 cm</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Position</span><span id="bPosition" class="compare-stat-value">Forward</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">League</span><span id="bLeague" class="compare-stat-value">LALIGA EA SPORTS</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Goals</span><span id="bGoals" class="compare-stat-value">22</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Assists</span><span id="bAssists" class="compare-stat-value">3</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Minutes</span><span id="bMinutes" class="compare-stat-value">2537</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Yellow Cards</span><span id="bYellow" class="compare-stat-value">3</span></div>
+            <div class="compare-stat-box"><span class="compare-stat-label">Red Cards</span><span id="bRed" class="compare-stat-value">1</span></div>
           </div>
         </div>
       </article>
@@ -230,192 +146,36 @@
         id: "athletic-club",
         name: "Athletic Club",
         players: [
-          {
-            name: "Oihan Sancet",
-            age: "24",
-            height: "188 cm",
-            position: "Midfielder",
-            league: "LALIGA EA SPORTS",
-            goals: "15",
-            assists: "1",
-            minutes: "1894",
-            yellowCards: "5",
-            redCards: "0",
-            image: "images/players/sancet.jpg",
-            link: "https://www.laliga.com/en-GB/player/oihan-sancet"
-          },
-          {
-            name: "Nico Williams",
-            age: "22",
-            height: "181 cm",
-            position: "Forward",
-            league: "LALIGA EA SPORTS",
-            goals: "5",
-            assists: "5",
-            minutes: "1671",
-            yellowCards: "1",
-            redCards: "0",
-            image: "images/players/nicowilliams.jpg",
-            link: "https://www.laliga.com/en-GB/player/nico-williams"
-          }
+          { name: "Oihan Sancet", age: "24", height: "188 cm", position: "Midfielder", league: "LALIGA EA SPORTS", goals: "15", assists: "1", minutes: "1894", yellowCards: "5", redCards: "0", image: "images/players/sancet.jpg", link: "https://www.laliga.com/en-GB/player/oihan-sancet" },
+          { name: "Nico Williams", age: "22", height: "181 cm", position: "Forward", league: "LALIGA EA SPORTS", goals: "5", assists: "5", minutes: "1671", yellowCards: "1", redCards: "0", image: "images/players/nicowilliams.jpg", link: "https://www.laliga.com/en-GB/player/nico-williams" }
         ]
       },
       {
         id: "atletico-de-madrid",
         name: "Atlético de Madrid",
         players: [
-          {
-            name: "Julián Alvarez",
-            age: "25",
-            height: "170 cm",
-            position: "Forward",
-            league: "LALIGA EA SPORTS",
-            goals: "15",
-            assists: "2",
-            minutes: "2313",
-            yellowCards: "7",
-            redCards: "0",
-            image: "images/players/julianalvarez.jpg",
-            link: "https://www.laliga.com/en-GB/player/julian-alvarez"
-          },
-          {
-            name: "Antoine Griezmann",
-            age: "34",
-            height: "176 cm",
-            position: "Forward",
-            league: "LALIGA EA SPORTS",
-            goals: "8",
-            assists: "6",
-            minutes: "2316",
-            yellowCards: "2",
-            redCards: "0",
-            image: "images/players/griezmann.jpg",
-            link: "https://www.laliga.com/en-GB/player/antoine-griezmann"
-          }
+          { name: "Julián Alvarez", age: "25", height: "170 cm", position: "Forward", league: "LALIGA EA SPORTS", goals: "15", assists: "2", minutes: "2313", yellowCards: "7", redCards: "0", image: "images/players/julianalvarez.jpg", link: "https://www.laliga.com/en-GB/player/julian-alvarez" },
+          { name: "Antoine Griezmann", age: "34", height: "176 cm", position: "Forward", league: "LALIGA EA SPORTS", goals: "8", assists: "6", minutes: "2316", yellowCards: "2", redCards: "0", image: "images/players/griezmann.jpg", link: "https://www.laliga.com/en-GB/player/antoine-griezmann" }
         ]
       },
       {
         id: "fc-barcelona",
         name: "FC Barcelona",
         players: [
-          {
-            name: "Pedri",
-            age: "22",
-            height: "174 cm",
-            position: "Midfielder",
-            league: "LALIGA EA SPORTS",
-            goals: "4",
-            assists: "5",
-            minutes: "2614",
-            yellowCards: "3",
-            redCards: "1",
-            image: "images/players/pedri.jpg",
-            link: "https://www.laliga.com/en-GB/player/pedri"
-          },
-          {
-            name: "Gavi",
-            age: "20",
-            height: "173 cm",
-            position: "Midfielder",
-            league: "LALIGA EA SPORTS",
-            goals: "1",
-            assists: "1",
-            minutes: "993",
-            yellowCards: "4",
-            redCards: "0",
-            image: "images/players/gavi.jpg",
-            link: "https://www.laliga.com/en-GB/player/gavi"
-          },
-          {
-            name: "Dani Olmo",
-            age: "26",
-            height: "179 cm",
-            position: "Midfielder",
-            league: "LALIGA EA SPORTS",
-            goals: "9",
-            assists: "2",
-            minutes: "1277",
-            yellowCards: "1",
-            redCards: "0",
-            image: "images/players/olmo.jpg",
-            link: "https://www.laliga.com/en-GB/player/dani-olmo"
-          }
+          { name: "Pedri", age: "22", height: "174 cm", position: "Midfielder", league: "LALIGA EA SPORTS", goals: "4", assists: "5", minutes: "2614", yellowCards: "3", redCards: "1", image: "images/players/pedri.jpg", link: "https://www.laliga.com/en-GB/player/pedri" },
+          { name: "Gavi", age: "20", height: "173 cm", position: "Midfielder", league: "LALIGA EA SPORTS", goals: "1", assists: "1", minutes: "993", yellowCards: "4", redCards: "0", image: "images/players/gavi.jpg", link: "https://www.laliga.com/en-GB/player/gavi" },
+          { name: "Dani Olmo", age: "26", height: "179 cm", position: "Midfielder", league: "LALIGA EA SPORTS", goals: "9", assists: "2", minutes: "1277", yellowCards: "1", redCards: "0", image: "images/players/olmo.jpg", link: "https://www.laliga.com/en-GB/player/dani-olmo" }
         ]
       },
       {
         id: "real-madrid",
         name: "Real Madrid",
         players: [
-          {
-            name: "Jude Bellingham",
-            age: "21",
-            height: "186 cm",
-            position: "Midfielder",
-            league: "LALIGA EA SPORTS",
-            goals: "4",
-            assists: "3",
-            minutes: "1291",
-            yellowCards: "1",
-            redCards: "0",
-            image: "images/players/bellingham.jpg",
-            link: "https://www.laliga.com/en-GB/player/jude-bellingham"
-          },
-          {
-            name: "Kylian Mbappé",
-            age: "26",
-            height: "178 cm",
-            position: "Forward",
-            league: "LALIGA EA SPORTS",
-            goals: "22",
-            assists: "3",
-            minutes: "2537",
-            yellowCards: "3",
-            redCards: "1",
-            image: "images/players/mbappe.jpg",
-            link: "https://www.laliga.com/en-GB/player/kylian-mbappe-lottin"
-          },
-          {
-            name: "Vinícius Júnior",
-            age: "24",
-            height: "176 cm",
-            position: "Forward",
-            league: "LALIGA EA SPORTS",
-            goals: "10",
-            assists: "5",
-            minutes: "1966",
-            yellowCards: "8",
-            redCards: "1",
-            image: "images/players/vinicius.jpg",
-            link: "https://www.laliga.com/en-GB/player/vini-jr"
-          },
-          {
-            name: "Rodrygo",
-            age: "24",
-            height: "174 cm",
-            position: "Forward",
-            league: "LALIGA EA SPORTS",
-            goals: "6",
-            assists: "5",
-            minutes: "1727",
-            yellowCards: "0",
-            redCards: "0",
-            image: "images/players/rodrygo.jpg",
-            link: "https://www.laliga.com/en-GB/player/rodrygo"
-          },
-          {
-            name: "Eduardo Camavinga",
-            age: "22",
-            height: "182 cm",
-            position: "Midfielder",
-            league: "LALIGA EA SPORTS",
-            goals: "0",
-            assists: "2",
-            minutes: "1166",
-            yellowCards: "5",
-            redCards: "0",
-            image: "images/players/camavinga.jpg",
-            link: "https://www.laliga.com/en-GB/player/eduardo-camavinga"
-          }
+          { name: "Jude Bellingham", age: "21", height: "186 cm", position: "Midfielder", league: "LALIGA EA SPORTS", goals: "4", assists: "3", minutes: "1291", yellowCards: "1", redCards: "0", image: "images/players/bellingham.jpg", link: "https://www.laliga.com/en-GB/player/jude-bellingham" },
+          { name: "Kylian Mbappé", age: "26", height: "178 cm", position: "Forward", league: "LALIGA EA SPORTS", goals: "22", assists: "3", minutes: "2537", yellowCards: "3", redCards: "1", image: "images/players/mbappe.jpg", link: "https://www.laliga.com/en-GB/player/kylian-mbappe-lottin" },
+          { name: "Vinícius Júnior", age: "24", height: "176 cm", position: "Forward", league: "LALIGA EA SPORTS", goals: "10", assists: "5", minutes: "1966", yellowCards: "8", redCards: "1", image: "images/players/vinicius.jpg", link: "https://www.laliga.com/en-GB/player/vini-jr" },
+          { name: "Rodrygo", age: "24", height: "174 cm", position: "Forward", league: "LALIGA EA SPORTS", goals: "6", assists: "5", minutes: "1727", yellowCards: "0", redCards: "0", image: "images/players/rodrygo.jpg", link: "https://www.laliga.com/en-GB/player/rodrygo" },
+          { name: "Eduardo Camavinga", age: "22", height: "182 cm", position: "Midfielder", league: "LALIGA EA SPORTS", goals: "0", assists: "2", minutes: "1166", yellowCards: "5", redCards: "0", image: "images/players/camavinga.jpg", link: "https://www.laliga.com/en-GB/player/eduardo-camavinga" }
         ]
       }
     ];
@@ -438,7 +198,6 @@
     function populatePlayerSelect(teamId, selectEl, defaultName = "") {
       const team = teams.find(t => t.id === teamId);
       selectEl.innerHTML = "";
-
       if (!team || !team.players.length) {
         const option = document.createElement("option");
         option.value = "";
@@ -471,7 +230,6 @@
     function renderCard(side, teamId, playerName) {
       const team = teams.find(t => t.id === teamId);
       const player = getPlayer(teamId, playerName);
-
       if (!team || !player) return;
 
       document.getElementById(`player${side}Photo`).src = player.image;
@@ -506,38 +264,14 @@
     }
 
     function updateSummary() {
-      const playerOne = getPlayer(teamA.value, playerA.value);
-      const playerTwo = getPlayer(teamB.value, playerB.value);
+      const one = getPlayer(teamA.value, playerA.value);
+      const two = getPlayer(teamB.value, playerB.value);
+      if (!one || !two) return;
 
-      if (!playerOne || !playerTwo) return;
-
-      document.getElementById("summaryGoals").textContent = winnerText(
-        playerOne.name,
-        parseNumber(playerOne.goals),
-        playerTwo.name,
-        parseNumber(playerTwo.goals)
-      );
-
-      document.getElementById("summaryAssists").textContent = winnerText(
-        playerOne.name,
-        parseNumber(playerOne.assists),
-        playerTwo.name,
-        parseNumber(playerTwo.assists)
-      );
-
-      document.getElementById("summaryMinutes").textContent = winnerText(
-        playerOne.name,
-        parseNumber(playerOne.minutes),
-        playerTwo.name,
-        parseNumber(playerTwo.minutes)
-      );
-
-      document.getElementById("summaryHeight").textContent = winnerText(
-        playerOne.name,
-        parseNumber(playerOne.height),
-        playerTwo.name,
-        parseNumber(playerTwo.height)
-      );
+      document.getElementById("summaryGoals").textContent = winnerText(one.name, parseNumber(one.goals), two.name, parseNumber(two.goals));
+      document.getElementById("summaryAssists").textContent = winnerText(one.name, parseNumber(one.assists), two.name, parseNumber(two.assists));
+      document.getElementById("summaryMinutes").textContent = winnerText(one.name, parseNumber(one.minutes), two.name, parseNumber(two.minutes));
+      document.getElementById("summaryHeight").textContent = winnerText(one.name, parseNumber(one.height), two.name, parseNumber(two.height));
     }
 
     function refreshCompare() {
@@ -564,12 +298,9 @@
 
     teamA.value = "real-madrid";
     teamB.value = "real-madrid";
-
     populatePlayerSelect("real-madrid", playerA, "Jude Bellingham");
     populatePlayerSelect("real-madrid", playerB, "Kylian Mbappé");
-
     refreshCompare();
   </script>
 </body>
 </html>
-
