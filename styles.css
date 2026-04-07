@@ -149,6 +149,13 @@ a {
   opacity: 0.9;
 }
 
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
 .section-card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -326,7 +333,7 @@ a {
 
 .filter-card {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
   gap: 16px;
   padding: 18px;
 }
@@ -460,6 +467,17 @@ a {
   filter: brightness(1.05);
 }
 
+.primary-btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.primary-btn-secondary:hover,
+.primary-btn-secondary:focus {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 .profile-link-btn-secondary,
 .form-reset {
   background: #eef2f7;
@@ -553,6 +571,13 @@ a {
   justify-content: center;
   font-weight: 800;
   box-shadow: var(--shadow-soft);
+}
+
+.compare-actions-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 24px;
 }
 
 .compare-summary-card {
