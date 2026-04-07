@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SoccerStats | Contact Us</title>
-   <!-- Author: Isaac Sanchez  -->
+  <!-- Author: Isaac Sanchez -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -25,51 +25,210 @@
   </header>
 
   <main class="page">
-    <h1 class="page-title">Contact Us</h1>
-    <p class="page-subtitle">Feedback is Appreciated</p>
+    <section class="contact-hero">
+      <h1 class="page-title">Contact Us</h1>
+      <p class="page-subtitle">Have feedback, suggestions, or questions? Send us a message.</p>
+    </section>
 
-    <section class="contact-wrap" aria-label="Contact form section">
-      <form class="contact-card" action="#" method="post">
-        <div class="form-group">
-          <label class="form-label" for="firstName">Name</label>
-          <input class="form-input" id="firstName" name="firstName" type="text" placeholder="Value" />
+    <section class="contact-layout" aria-label="Contact section">
+      <aside class="contact-info-card" aria-label="Contact information">
+        <p class="contact-kicker">Get In Touch</p>
+        <h2 class="contact-info-title">We’d love to hear from you</h2>
+        <p class="contact-info-text">
+          Use the form to send feedback about player stats, team pages, comparisons, or ideas for improving SoccerStats.
+        </p>
+
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <span class="contact-info-label">Response Time</span>
+            <span class="contact-info-value">Usually within 1–2 days</span>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-info-label">Best For</span>
+            <span class="contact-info-value">Feedback, bug reports, suggestions</span>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-info-label">Website</span>
+            <span class="contact-info-value">SoccerStats</span>
+          </div>
         </div>
+      </aside>
 
-        <div class="form-group">
-          <label class="form-label" for="lastName">Surname</label>
-          <input class="form-input" id="lastName" name="lastName" type="text" placeholder="Value" />
-        </div>
+      <section class="contact-form-panel" aria-label="Contact form panel">
+        <form class="contact-card contact-card-pro" id="contactForm" action="#" method="post" novalidate>
+          <div class="contact-form-header">
+            <h2 class="contact-form-title">Send a Message</h2>
+            <p class="contact-form-text">Fill out the form below and we’ll review your message.</p>
+          </div>
 
-        <div class="form-group">
-          <label class="form-label" for="email">Email</label>
-          <input class="form-input" id="email" name="email" type="email" placeholder="Value" />
-        </div>
+          <div class="contact-grid">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name</label>
+              <input
+                class="form-input"
+                id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="Enter your first name"
+                required
+              />
+              <small class="form-error" id="firstNameError"></small>
+            </div>
 
-        <div class="form-group">
-          <label class="form-label" for="message">Message</label>
-          <textarea class="form-textarea" id="message" name="message" rows="4" placeholder="Value"></textarea>
-        </div>
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name</label>
+              <input
+                class="form-input"
+                id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="Enter your last name"
+                required
+              />
+              <small class="form-error" id="lastNameError"></small>
+            </div>
+          </div>
 
-        <button class="form-submit" type="submit">Submit</button>
-      </form>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input
+              class="form-input"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+            <small class="form-error" id="emailError"></small>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="topic">Topic</label>
+            <select class="form-input form-select" id="topic" name="topic" required>
+              <option value="">Select a topic</option>
+              <option value="feedback">General Feedback</option>
+              <option value="bug">Bug Report</option>
+              <option value="stats">Stats Question</option>
+              <option value="suggestion">Feature Suggestion</option>
+            </select>
+            <small class="form-error" id="topicError"></small>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea
+              class="form-textarea"
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+            <small class="form-error" id="messageError"></small>
+          </div>
+
+          <div class="contact-form-actions">
+            <button class="form-submit" type="submit">Send Message</button>
+            <button class="form-reset" type="reset">Clear Form</button>
+          </div>
+
+          <p class="form-success" id="formSuccess" aria-live="polite"></p>
+        </form>
+      </section>
     </section>
   </main>
 
   <footer class="site-footer">
     <nav class="footer-left" aria-label="Social links">
-      <a class="social" href="#" aria-label="X">X</a>
-      <a class="social" href="#" aria-label="Instagram">◎</a>
-      <a class="social" href="#" aria-label="YouTube">▶</a>
-      <a class="social" href="#" aria-label="LinkedIn">in</a>
+      <a class="social" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+      <a class="social" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+      <a class="social" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+      <a class="social" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
     </nav>
-
-    <div class="footer-links">
-      <a href="#" class="footer-link">Explore</a>
-      <a href="#" class="footer-link">Resources</a>
-    </div>
-
-    <div class="footer-right" aria-hidden="true"></div>
   </footer>
-</body>
 
+  <script>
+    const contactForm = document.getElementById("contactForm");
+    const formSuccess = document.getElementById("formSuccess");
+
+    const fields = [
+      {
+        input: document.getElementById("firstName"),
+        error: document.getElementById("firstNameError"),
+        message: "Please enter your first name."
+      },
+      {
+        input: document.getElementById("lastName"),
+        error: document.getElementById("lastNameError"),
+        message: "Please enter your last name."
+      },
+      {
+        input: document.getElementById("email"),
+        error: document.getElementById("emailError"),
+        message: "Please enter a valid email address."
+      },
+      {
+        input: document.getElementById("topic"),
+        error: document.getElementById("topicError"),
+        message: "Please select a topic."
+      },
+      {
+        input: document.getElementById("message"),
+        error: document.getElementById("messageError"),
+        message: "Please enter your message."
+      }
+    ];
+
+    function validateEmail(email) {
+      return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
+    }
+
+    function clearErrors() {
+      fields.forEach(field => {
+        field.error.textContent = "";
+        field.input.classList.remove("input-error");
+      });
+      formSuccess.textContent = "";
+    }
+
+    function validateForm() {
+      let isValid = true;
+      clearErrors();
+
+      fields.forEach(field => {
+        const value = field.input.value.trim();
+
+        if (!value) {
+          field.error.textContent = field.message;
+          field.input.classList.add("input-error");
+          isValid = false;
+        }
+      });
+
+      const emailInput = document.getElementById("email");
+      if (emailInput.value.trim() && !validateEmail(emailInput.value.trim())) {
+        document.getElementById("emailError").textContent = "Please enter a valid email address.";
+        emailInput.classList.add("input-error");
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!validateForm()) return;
+
+      formSuccess.textContent = "Your message has been submitted successfully.";
+      contactForm.reset();
+    });
+
+    contactForm.addEventListener("reset", function () {
+      clearErrors();
+    });
+  </script>
+</body>
 </html>
