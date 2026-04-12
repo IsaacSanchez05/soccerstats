@@ -792,24 +792,33 @@ a {
   .all-teams-grid {
     grid-template-columns: repeat(2, minmax(80px, 1fr));
   }
-  .share-box {
-border: 1px solid #ccc;
-padding: 15px;
-margin: 20px 0;
-text-align: center;
-border-radius: 8px;
+.share-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 24px;
+  margin: 28px 0 0;
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
 }
 
+.share-box h2 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.share-box p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
 
 .share-box button {
-padding: 10px 18px;
-font-size: 16px;
-cursor: pointer;
+  min-width: 140px;
 }
 
-
 #shareMessage {
-margin-top: 10px;
-font-size: 14px;
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: var(--text);
 }
 }
