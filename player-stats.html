@@ -371,6 +371,27 @@
 <button id="shareBtn">Share</button>
 <p id="shareMessage"></p>
 </section>
-  </script>
+ 
+  shareBtn.addEventListener("click", async function () {
+const shareData = {
+title: document.title,
+text: "Check out this page from my website!",
+url: window.location.href
+};
+
+
+if (navigator.share) {
+try {
+await navigator.share(shareData);
+shareMessage.textContent = "Thanks for sharing!";
+} catch (error) {
+shareMessage.textContent = "Share canceled.";
+}
+} else {
+navigator.clipboard.writeText(window.location.href);
+shareMessage.textContent = "Link copied! You can now paste it on social media.";
+}
+});
+</script>
 </body>
 </html>
